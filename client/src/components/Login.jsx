@@ -1,15 +1,14 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
-import { setCurrentUser, setRole } from "./../redux/user/userSlice.js";
-import BackButton from "../components/BackButton.jsx";
+import { setCurrentUser, setRole } from "../redux/user/userSlice.js";
 import { Link } from "react-router-dom";
 
 const Login = () => {
   const [form, setForm] = React.useState({});
   const [error, setError] = React.useState("");
-  const { currentUser, role } = useSelector((state) => state.user);
-  console.log({ currentUser, role });
+  const {role} = useSelector((state) => state.user);
+  console.log({role})
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleChange = (e) => {

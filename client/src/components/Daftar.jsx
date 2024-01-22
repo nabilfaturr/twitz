@@ -6,6 +6,8 @@ const Daftar = () => {
   const [form, setForm] = React.useState({});
   const navigate = useNavigate();
 
+  console.log(form)
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.id]: e.target.value });
   };
@@ -25,8 +27,6 @@ const Daftar = () => {
       navigate("/sign-in");
     }
   };
-
-  console.log(form);
 
   return (
     <main className="w-full h-screen flex items-center">
